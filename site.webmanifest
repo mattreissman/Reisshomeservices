@@ -1,7 +1,7 @@
 {
   "name": "Reiss Home Services",
   "short_name": "Reiss Home",
-  "description": "Professional handyman repairs, installations, and home maintenance in San Diego County.",
+  "description": "Handyman repairs, installations, and punch lists in San Diego County.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0c1626",

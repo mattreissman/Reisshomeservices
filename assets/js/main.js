@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const serviceSearch = document.querySelector('[data-service-search]');
   const serviceItems = [...document.querySelectorAll('[data-service-item]')];
+  const serviceSections = [...document.querySelectorAll('.service-section')];
   const resultsCounter = document.querySelector('[data-results-counter]');
 
   if (serviceSearch && serviceItems.length) {
@@ -83,6 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const show = !query || text.includes(query);
         item.classList.toggle('hidden', !show);
         if (show) visibleCount += 1;
+      });
+
+      serviceSections.forEach((section) => {
+        const hasVisibleItems = [...section.querySelectorAll('[data-service-item]')].some(
+          (item) => !item.classList.contains('hidden')
+        );
+        section.classList.toggle('hidden', !hasVisibleItems);
       });
 
       if (resultsCounter) {
@@ -139,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = href;
 
       if (formStatus) {
-        formStatus.textContent = 'Your email app should open with a prefilled quote request. If it does not, call or email directly using the buttons on this page.';
+        formStatus.textContent = 'Your email app should open with a prepared quote request. If it does not, email matt@reisshomeservices.com or call (714) 310-5163.';
       }
     });
   }

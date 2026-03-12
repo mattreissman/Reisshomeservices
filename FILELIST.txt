@@ -1,6 +1,7 @@
 .nojekyll
 404.html
 CNAME
+FILELIST.txt
 README.md
 about/index.html
 apple-touch-icon.png

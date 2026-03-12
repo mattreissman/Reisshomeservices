@@ -1468,3 +1468,8 @@ textarea {
     transform: none;
   }
 }
+
+
+.service-section.hidden {
+  display: none;
+}
